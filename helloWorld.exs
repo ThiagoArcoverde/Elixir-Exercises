@@ -1,9 +1,9 @@
 defmodule HelloWorldScript do
 
-  def printHelloWorld do
+  def print_hello_world do
     IO.puts "Hello world!"
   end
 
 end
 
-HelloWorldScript.printHelloWorld()
+HelloWorldScript.print_hello_world()

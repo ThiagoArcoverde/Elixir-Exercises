@@ -1,7 +1,7 @@
 
 defmodule EnumModule do
   # Applies the function to each element of the list and returns true if all elements satisfy the condition
-  def allFunction do
+  def all_function do
     list = ["foo", "bar", "abc"]
     IO.puts("List: ")
     IO.inspect(list)
@@ -11,7 +11,7 @@ defmodule EnumModule do
     IO.puts(Enum.all?(list, fn x -> String.length(x) > 1 end))
   end
 
-  def anyFunction do
+  def any_function do
     # Applies the function to each element of the list and returns true if at least one element satisfies the condition
     list = ["foo", "bar", "abc", "hello", "world"]
     IO.puts("List: ")
@@ -22,7 +22,7 @@ defmodule EnumModule do
     IO.puts(Enum.any?(list, fn x -> String.length(x) > 5 end))
   end
 
-  def chunkEveryFunction do
+  def chunk_every_function do
     # Splits the list into sublists of the specified size
     list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
     IO.puts("List: ")
@@ -31,7 +31,7 @@ defmodule EnumModule do
     IO.inspect(Enum.chunk_every(list, 3), charlists: :as_list)
   end
 
-  def chunkByFunction do
+  def chunk_by_function do
     # Splits the list into sublists based on the function
     list = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
     IO.puts("List: ")
@@ -40,7 +40,7 @@ defmodule EnumModule do
     IO.inspect(Enum.chunk_by(list, fn x -> String.length(x) end), charlists: :as_list)
   end
 
-  def mapEveryFunction do
+  def map_every_function do
     # Applies the function to ever Nth element of the list
     list = [1, 2, 3, 4, 5]
     IO.puts("List: ")
@@ -49,7 +49,7 @@ defmodule EnumModule do
     IO.inspect(Enum.map_every(list, 1, fn x -> x * 2 end))
   end
 
-  def eachFunction do
+  def each_function do
     # Iterates over each element of the list and applies the function
     list = [1, 2, 3, 4, 5]
     IO.puts("List: ")
@@ -57,7 +57,7 @@ defmodule EnumModule do
     Enum.each(list, fn x -> IO.puts("Element: #{x}") end)
   end
 
-  def mapFunction do
+  def map_function do
     # Applies the function to each element of the list and returns a new list with the results
     list = [1, 2, 3, 4, 5]
     IO.puts("List: ")
@@ -66,7 +66,7 @@ defmodule EnumModule do
     IO.inspect(Enum.map(list, fn x -> x * 10 end))
   end
 
-  def min1Function do
+  def min1_function do
     # Returns the minimum element of the list
     list = [1, 2, 3, 4, 5]
     IO.puts("List: ")
@@ -75,7 +75,7 @@ defmodule EnumModule do
     IO.inspect(Enum.min(list))
   end
 
-  def min2Function do
+  def min2_function do
     # does the same as min1 but allows us to specify a function in case the enumerable is empty to return a default value
     list = []
     IO.puts("List: ")
@@ -84,7 +84,7 @@ defmodule EnumModule do
     IO.inspect(Enum.min(list, fn -> 0 end))
   end
 
-  def max1Function do
+  def max1_function do
     # Returns the maximum element of the list
     list = [1, 2, 3, 4, 5]
     IO.puts("List: ")
@@ -93,7 +93,7 @@ defmodule EnumModule do
     IO.inspect(Enum.max(list))
   end
 
-  def max2Function do
+  def max2_function do
     # does the same as max1 but allows us to specify a function in case the enumerable is empty to return a default value
     list = []
     IO.puts("List: ")
@@ -102,7 +102,7 @@ defmodule EnumModule do
     IO.inspect(Enum.max(list, fn -> 0 end))
   end
 
-  def filterFunction do
+  def filter_function do
     # Returns a new list with the elements that satisfy the condition
     list = [1, 2, 3, 4, 5]
     IO.puts("List: ")
@@ -111,7 +111,7 @@ defmodule EnumModule do
     IO.inspect(Enum.filter(list, fn x -> rem(x, 2) == 0 end))
   end
 
-  def reduceFunction do
+  def reduce_function do
     # Applies the function to each element of the list and returns the accumulated value
     list = [1, 2, 3, 4, 5]
     IO.puts("List: ")
@@ -120,7 +120,7 @@ defmodule EnumModule do
     IO.inspect(Enum.reduce(list, 0, fn x, acc -> x + acc end))
   end
 
-  def sort1Function do
+  def sort1_function do
     # Returns a new list with the elements sorted using the Erlang's term ordering
     list = [5, 3, 1, 4, 2]
     IO.puts("List: ")
@@ -129,7 +129,7 @@ defmodule EnumModule do
     IO.inspect(Enum.sort(list))
   end
 
-  def sort2Function do
+  def sort2_function do
     # Returns a new list with the elements sorted using the provided function of our own, we can also
     # define if we want the list to be sorted in ascending or descending order instead of providing a function
     list = [5, 3, 1, 4, 2]
@@ -141,7 +141,7 @@ defmodule EnumModule do
     IO.inspect(Enum.sort(list, :asc))
   end
 
-  def uniqFunction do
+  def uniq_function do
     # Returns a new list removing the duplicates
     list = [1, 2, 3, 4, 5, 1, 2, 3, 4, 5]
     IO.puts("List: ")
@@ -150,7 +150,7 @@ defmodule EnumModule do
     IO.inspect(Enum.uniq(list))
   end
 
-  def uniqByFunction do
+  def uniq_by_function do
     # Returns a new list removing the duplicates based on the function we provied
     list = ["foo", "bar", "abc", "hello", "world"]
     IO.puts("List: ")
@@ -159,7 +159,7 @@ defmodule EnumModule do
     IO.inspect(Enum.uniq_by(list, fn x -> String.length(x) end))
   end
 
-  def captureOperatorFunction do
+  def capture_operator_function do
     # the capture operator (&), captures each iterable element and applies the function to it
     list = [1, 2, 3, 4, 5]
     IO.puts("List: ")
@@ -172,7 +172,7 @@ defmodule EnumModule do
     number * 10
   end
 
-  def captureOperatorNamedFunction do
+  def capture_operator_named_function do
     list = [1, 2, 3, 4, 5]
     IO.puts("List: ")
     IO.inspect(list)
@@ -183,22 +183,22 @@ defmodule EnumModule do
 
 end
 
-# EnumModule.allFunction()
-# EnumModule.anyFunction()
-# EnumModule.chunkEveryFunction()
-# EnumModule.chunkByFunction()
-# EnumModule.mapEveryFunction()
-# EnumModule.eachFunction()
-# EnumModule.mapFunction()
-# EnumModule.min1Function()
-# EnumModule.min2Function()
-# EnumModule.max1Function()
-# EnumModule.max2Function()
-# EnumModule.filterFunction()
-# EnumModule.reduceFunction()
-# EnumModule.sort1Function()
-# EnumModule.sort2Function()
-# EnumModule.uniqFunction()
-# EnumModule.uniqByFunction()
-# EnumModule.captureOperatorFunction()
-EnumModule.captureOperatorNamedFunction()
+EnumModule.all_function()
+EnumModule.any_function()
+EnumModule.chunk_every_function()
+EnumModule.chunk_by_function()
+EnumModule.map_every_function()
+EnumModule.each_function()
+EnumModule.map_function()
+EnumModule.min1_function()
+EnumModule.min2_function()
+EnumModule.max1_function()
+EnumModule.max2_function()
+EnumModule.filter_function()
+EnumModule.reduce_function()
+EnumModule.sort1_function()
+EnumModule.sort2_function()
+EnumModule.uniq_function()
+EnumModule.uniq_by_function()
+EnumModule.capture_operator_function()
+EnumModule.capture_operator_named_function()
